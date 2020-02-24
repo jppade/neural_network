@@ -1,0 +1,3 @@
+This is a general neural network class.
+It can have an arbitrary number of layers, input neurons and output neurons.
+The short list of activation functions, including a sigmoid, can be further extended. 

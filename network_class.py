@@ -16,7 +16,7 @@ from scipy.optimize import fmin
 class NN:
     
     """
-    This is the neural network class at the core of the business layer.
+    This is the neural network class.
     A neural network is uniquely defined by weights and biases.
     @weights is a list of numpy arrays. Each array corresponds to a coupling 
     matrix acting between two layers.
