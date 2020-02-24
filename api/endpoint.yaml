@@ -1,0 +1,52 @@
+swagger: "2.0"
+
+info:
+  title: "Test"
+  version: "1.0"
+
+basePath: /v1.0
+
+paths:
+  /data:
+    post:
+      operationId: endpoint.data
+      consumes:
+        - multipart/form-data
+      produces:
+        - text/csv
+      parameters:
+        - name: myFile
+          in: formData   
+          description: The uploaded file data
+          required: true
+          type: file 
+      responses:
+        '201':
+          description: 'Register Project ID and Part Settings'
+            
+  /price:
+    get:
+      operationId: endpoint.network_engine
+      parameters:
+        - name: col_label
+          in: query
+          description: Column number of label in uploaded file
+          type: integer
+          required: true
+        - name: threshold
+          in: query
+          description: Threshold for classification rate
+          type: number
+          required: true
+        - name: point
+          in: query
+          description: Point to classify
+          type: array
+          items:
+            type: number
+          required: true
+      responses:
+        '201':
+          description: 'Register Project ID and Part Settings'
+      
+  
